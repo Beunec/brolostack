@@ -17,7 +17,7 @@ If you discover a security vulnerability in Brolostack, please report it respons
 
 ### 📧 **How to Report**
 
-1. **Email**: Send details to `security@beunec.com`
+1. **Email**: Send details to `contact@beunec.com`
 2. **Subject**: `[SECURITY] Brolostack Vulnerability Report`
 3. **Include**:
    - Description of the vulnerability
