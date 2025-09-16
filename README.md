@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Beunec/brolostack)
-[![Downloads](https://img.shields.io/npm/dm/brolostack.svg)](https://www.npmjs.com/package/brolostack)
+[![Downloads](https://img.shields.io/npm/dm/brolostack.svg)]([https://www.npmjs.com/package/brolostack](https://www.npmjs.com/package/brolostack))
 [![Stars](https://img.shields.io/github/stars/Beunec/brolostack.svg)](https://github.com/Beunec/brolostack/stargazers)
 
 **Public Release Date**: September 16, 2025 | **Version**: 1.0.0
