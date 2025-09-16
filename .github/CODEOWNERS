@@ -1,0 +1,42 @@
+# Code Owners for Brolostack
+# This file defines who is responsible for reviewing and approving changes to specific parts of the codebase.
+
+# Global owners - required for all changes
+* @Beunec/brolostack-maintainers
+
+# Core framework files
+/src/core/ @Beunec/brolostack-core-team
+/src/storage/ @Beunec/brolostack-core-team
+/src/utils/ @Beunec/brolostack-core-team
+
+# AI integration
+/src/ai/ @Beunec/brolostack-ai-team
+
+# Cloud integration
+/src/cloud/ @Beunec/brolostack-cloud-team
+
+# React integration
+/src/react/ @Beunec/brolostack-frontend-team
+
+# Documentation
+/docs/ @Beunec/brolostack-docs-team
+README.md @Beunec/brolostack-docs-team
+CONTRIBUTING.md @Beunec/brolostack-docs-team
+SECURITY.md @Beunec/brolostack-security-team
+
+# Configuration files
+package.json @Beunec/brolostack-maintainers
+tsconfig.json @Beunec/brolostack-maintainers
+rollup.config.js @Beunec/brolostack-maintainers
+.eslintrc.cjs @Beunec/brolostack-maintainers
+
+# Examples and demos
+/examples/ @Beunec/brolostack-examples-team
+
+# Security and compliance
+SECURITY.md @Beunec/brolostack-security-team
+ATTRIBUTION.md @Beunec/brolostack-legal-team
+LICENSE @Beunec/brolostack-legal-team
+
+# GitHub workflows and templates
+/.github/ @Beunec/brolostack-devops-team
