@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Beunec/brolostack)
+[![NPM Package](https://img.shields.io/badge/npm-brolostack-red.svg)](https://www.npmjs.com/package/brolostack)
 [![Downloads](https://img.shields.io/npm/dm/brolostack.svg)](https://www.npmjs.com/package/brolostack)
 [![Stars](https://img.shields.io/github/stars/Beunec/brolostack.svg)](https://github.com/Beunec/brolostack/stargazers)
 
@@ -231,6 +232,8 @@ sequenceDiagram
 ## 🚀 Quick Start
 
 ### 📦 Installation
+
+**📦 [View on npm](https://www.npmjs.com/package/brolostack)**
 
 ```bash
 # Install Brolostack
