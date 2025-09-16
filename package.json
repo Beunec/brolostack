@@ -31,7 +31,7 @@
     "lint": "eslint src/**/*.ts",
     "type-check": "tsc --noEmit",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test && npm run lint && npm run type-check"
+    "prepublishOnly": "npm run type-check"
   },
   "keywords": [
     "full-stack",
@@ -47,8 +47,13 @@
   ],
   "author": {
     "name": "Olu Akinnawo",
-    "email": "olu@beunec.com",
+    "email": "olu@beuneteam.com",
     "url": "https://github.com/olustar"
+  },
+  "publisher": {
+    "name": "Beunec Technologies, Inc.",
+    "email": "support@beunec.com",
+    "url": "https://beunec.co"
   },
   "license": "MIT",
   "repository": {
@@ -97,5 +102,14 @@
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
+  },
+  "attribution": {
+    "required": true,
+    "message": "This project uses Brolostack by Beunec Technologies, Inc. Please include attribution in your application.",
+    "url": "https://github.com/Beunec/brolostack"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

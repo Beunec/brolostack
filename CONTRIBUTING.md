@@ -138,12 +138,31 @@ src/
 
 ## Pull Request Process
 
+### For External Contributors
+
+**Important**: All external contributions must be approved by a member of the **Beunec Technologies, Inc. R&D Team** before merging.
+
 1. **Create a Pull Request**: Use the GitHub interface to create a PR
 2. **Fill out the Template**: Complete all sections of the PR template
 3. **Link Issues**: Reference any related issues
 4. **Add Tests**: Include tests for new functionality
 5. **Update Documentation**: Update relevant documentation
 6. **Ensure CI Passes**: All checks must pass before review
+7. **Wait for Approval**: A Beunec R&D team member will review and approve your contribution
+
+### Approval Process
+
+- **Automatic Approval**: Beunec Technologies, Inc. team members
+- **Manual Review Required**: External contributors
+- **Review Timeline**: 2-5 business days for initial review
+- **Feedback**: We provide constructive feedback to help improve contributions
+
+### Branch Protection
+
+- All PRs must be created from feature branches (not main)
+- All PRs require at least one approval from Beunec R&D team
+- All CI checks must pass before merging
+- No direct pushes to main branch allowed
 
 ### PR Template
 
