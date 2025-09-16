@@ -1,0 +1,86 @@
+/* Private Mode Example Styles */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Private Mode Status Styles */
+.private-mode-active {
+  border-color: #ff6b6b !important;
+  background-color: #fff5f5 !important;
+}
+
+.normal-mode-active {
+  border-color: #51cf66 !important;
+  background-color: #f0fff4 !important;
+}
+
+/* DuckDuckGo Styles */
+.duckduckgo-detected {
+  border-color: #28a745 !important;
+  background-color: #e8f5e8 !important;
+}
+
+/* Button Styles */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Input Styles */
+input[type="text"] {
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* List Styles */
+ul {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+li {
+  transition: background-color 0.2s ease;
+}
+
+li:hover {
+  background-color: #e9ecef !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #root {
+    padding: 10px;
+  }
+  
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
