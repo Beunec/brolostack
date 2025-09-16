@@ -73,7 +73,7 @@ Add to your package.json:
 ## 📞 Contact
 
 For questions about attribution or licensing:
-- **Email**: tech@beunec.com
+- **Email**: support@beunec.com
 - **GitHub Issues**: https://github.com/Beunec/brolostack/issues
 
 ## 🙏 Thank You
