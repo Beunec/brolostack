@@ -1,6 +1,6 @@
 {
   "name": "brolostack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A Revolutionary, Zero-Cost Full-Stack Package Framework - Browser Local Stack",
   "main": "dist/index.js",
@@ -22,7 +22,9 @@
     "dist",
     "src",
     "docs",
-    "examples"
+    "examples",
+    "SECURITY.md",
+    ".github/CODEOWNERS"
   ],
   "scripts": {
     "build": "rollup -c",
