@@ -3,7 +3,29 @@
  */
 
 export interface AIConfig {
-  provider: 'openai' | 'anthropic' | 'google' | 'custom';
+  provider: 
+    | 'openai' 
+    | 'anthropic' 
+    | 'google' 
+    | 'azure' 
+    | 'aws' 
+    | 'huggingface' 
+    | 'cohere' 
+    | 'ai21' 
+    | 'deepseek' 
+    | 'perplexity' 
+    | 'ibm-watson' 
+    | 'minimax' 
+    | 'databricks' 
+    | 'xai' 
+    | 'clarifai' 
+    | 'together-ai' 
+    | 'nlp-cloud' 
+    | 'aimapi' 
+    | 'mistral' 
+    | 'groq' 
+    | 'replicate' 
+    | 'custom';
   model: string;
   apiKey?: string;
   baseURL?: string;

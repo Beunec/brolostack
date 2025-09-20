@@ -1,6 +1,6 @@
 # Getting Started with Brolostack
 
-**Build full-stack apps with zero server costs** - Brolostack runs entirely in the user's browser.
+**Build full-stack apps with zero server costs** - Brolostack runs entirely in the user's browser with optional cloud integration.
 
 ## Quick Install
 
@@ -17,7 +17,7 @@ import { Brolostack } from 'brolostack';
 
 const app = new Brolostack({
   appName: 'my-app',
-  version: '1.0.0'
+  version: '1.0.2'
 });
 
 await app.initialize();
@@ -109,9 +109,12 @@ function TodoApp() {
 
 ## AI Integration
 
-### Create AI Agent
+Brolostack includes comprehensive AI capabilities with multiple providers and governance.
+
+### Basic AI Usage
 
 ```typescript
+// Create AI agent
 const aiAgent = app.ai.createAgent({
   name: 'assistant',
   type: 'chat',
@@ -124,10 +127,38 @@ await app.ai.storeMemory('user_preferences', {
   language: 'en'
 }, 'preference');
 
-// Use AI
+// Use AI with context
 const response = await app.ai.runAgent('assistant', {
   prompt: 'Help me organize my tasks',
   context: { todos: todoStore.getState().todos }
+});
+```
+
+### Advanced AI Framework
+
+```typescript
+import { BrolostackAIFramework } from 'brolostack';
+
+const aiFramework = new BrolostackAIFramework({
+  provider: {
+    name: 'openai',
+    apiKey: 'your-api-key',
+    model: 'gpt-4'
+  },
+  reasoning: { framework: 'cot' }, // Chain-of-Thought
+  governance: {
+    enabled: true,
+    config: {
+      hallucination: { enabled: true },
+      toxicLanguage: { enabled: true },
+      bias: { enabled: true }
+    }
+  }
+});
+
+// AI with reasoning and safety
+const result = await aiFramework.processQuery('Analyze this data', {
+  data: todoStore.getState().todos
 });
 ```
 
@@ -155,15 +186,63 @@ await app.importData(data);
 
 ## Cloud Integration (Optional)
 
+Brolostack supports 22+ cloud providers for optional data synchronization and backup.
+
+### Basic Cloud Setup
+
 ```typescript
-import { CloudBrolostack } from 'brolostack/cloud';
+import { CloudBrolostack } from 'brolostack';
 
 const cloudApp = new CloudBrolostack({
   appName: 'my-cloud-app',
+  version: '1.0.2',
   cloud: {
-    provider: 'aws',
-    config: { region: 'us-east-1', bucket: 'my-data' },
-    autoSync: true
+    enabled: true,
+    adapters: [
+      {
+        name: 'aws',
+        provider: 'aws',
+        config: {
+          region: 'us-east-1',
+          accessKeyId: 'your-key',
+          secretAccessKey: 'your-secret'
+        },
+        enabled: true
+      }
+    ],
+    syncStrategy: 'local-first',
+    conflictResolution: 'client-wins'
+  }
+});
+```
+
+### Multi-Cloud Configuration
+
+```typescript
+const multiCloudApp = new CloudBrolostack({
+  appName: 'multi-cloud-app',
+  version: '1.0.2',
+  cloud: {
+    enabled: true,
+    adapters: [
+      {
+        name: 'mongodb',
+        provider: 'mongodb',
+        config: { connectionString: 'mongodb://...' },
+        enabled: true,
+        priority: 1
+      },
+      {
+        name: 'redis',
+        provider: 'redis',
+        config: { host: 'redis.example.com' },
+        enabled: true,
+        priority: 2
+      }
+    ],
+    syncStrategy: 'hybrid',
+    autoSync: true,
+    syncInterval: 60000 // 1 minute
   }
 });
 ```
@@ -177,6 +256,10 @@ const cloudApp = new CloudBrolostack({
 | **Actions** | Functions that modify state | `store.addUser(user)` |
 | **Persistence** | Auto-save to browser storage | `store.persist({...})` |
 | **AI Memory** | Persistent AI context | `app.ai.storeMemory(...)` |
+| **Cloud Adapters** | Optional cloud service integration | `CloudBrolostack with adapters` |
+| **WebSocket** | Real-time communication | `BrolostackWSClientside` |
+| **Security** | Zero-knowledge encryption | `BrolostackDevil` |
+| **Authentication** | CIAM and multi-provider auth | `AuthManager` |
 
 ## Best Practices
 
@@ -242,12 +325,60 @@ const app = new Brolostack({
 });
 ```
 
+## Advanced Features
+
+### Security with Devil Framework
+
+```typescript
+import { BrolostackDevil } from 'brolostack';
+
+const devil = new BrolostackDevil({
+  encryptionLevel: 'quantum-resistant',
+  selfEvolving: true,
+  sourceCodeProtection: true
+});
+
+// Encrypt sensitive data
+const encrypted = await devil.encryptData(sensitiveData, 'user-key');
+```
+
+### Real-Time Communication
+
+```typescript
+import { BrolostackWSClientside } from 'brolostack';
+
+const ws = new BrolostackWSClientside({
+  url: 'wss://your-server.com',
+  autoConnect: true
+});
+
+ws.joinRoom('collaboration-room');
+ws.send('message', { content: 'Hello World!' });
+```
+
+### Multi-Provider Authentication
+
+```typescript
+import { AuthManager } from 'brolostack';
+
+const auth = new AuthManager({
+  ciam: {
+    enabled: true,
+    providers: ['auth0', 'microsoft-entra'],
+    primaryProvider: 'auth0'
+  }
+});
+
+const session = await auth.ciamLogin('auth0', { email, password });
+```
+
 ## Next Steps
 
-1. **Explore Examples**: Check out `/examples` for complete apps
-2. **Read API Docs**: See [API Reference](API_REFERENCE.md) for full details
+1. **Explore Examples**: Check out `/examples` for complete applications
+2. **Read Documentation**: See specialized docs for advanced features
 3. **Join Community**: [GitHub Discussions](https://github.com/Beunec/brolostack/discussions)
 4. **Get Support**: [GitHub Issues](https://github.com/Beunec/brolostack/issues)
+5. **Learn Advanced**: Check out AI Framework, Security, and WebSocket guides
 
 ---
 

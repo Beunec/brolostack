@@ -1,0 +1,321 @@
+/* 🔥 Brolostack Devil Protected CSS
+ * This CSS file demonstrates style obfuscation
+ * All class names, IDs, and custom properties will become jargon
+ */
+
+/* Root variables (will be obfuscated) */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --accent-color: #f39c12;
+  --text-color: #2c3e50;
+  --background-color: #ecf0f1;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* Layout classes (will be obfuscated) */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.header-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+}
+
+.user-profile-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed);
+}
+
+.user-profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Component-specific styles (will be obfuscated) */
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--text-color);
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color var(--transition-speed);
+}
+
+.nav-item:hover {
+  background-color: var(--primary-color);
+}
+
+.nav-item.active {
+  background-color: var(--accent-color);
+}
+
+/* Form styles (sensitive - will be obfuscated) */
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  transition: border-color var(--transition-speed);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.submit-button {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-speed);
+  width: 100%;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Security-related styles (ultra-sensitive) */
+.secret-admin-panel {
+  background: #ff0000;
+  color: white;
+  padding: 20px;
+  border: 3px solid #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+}
+
+.admin-controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.admin-button {
+  background: #000;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.admin-button:hover {
+  background: #ff0000;
+  color: #000;
+}
+
+/* Data visualization (will be obfuscated) */
+.chart-container {
+  background: white;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.data-point {
+  display: inline-block;
+  width: 50px;
+  height: 200px;
+  background: linear-gradient(to top, var(--primary-color), var(--accent-color));
+  margin: 0 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.data-label {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+/* Responsive design (will be obfuscated) */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+  
+  .header-section {
+    padding: 20px;
+  }
+  
+  .navigation-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .user-profile-card {
+    padding: 20px;
+  }
+  
+  .chart-container {
+    padding: 15px;
+  }
+  
+  .data-point {
+    width: 30px;
+    height: 150px;
+  }
+}
+
+/* Animation keyframes (will be obfuscated) */
+@keyframes devil-protection-pulse {
+  0% { 
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+    transform: scale(1);
+  }
+  70% { 
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+    transform: scale(1.05);
+  }
+  100% { 
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+@keyframes quantum-encryption-spin {
+  from { 
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Devil protection indicator */
+.devil-protected {
+  animation: devil-protection-pulse 2s infinite;
+  position: relative;
+}
+
+.devil-protected::before {
+  content: "🔥";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff0000;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  animation: quantum-encryption-spin 3s linear infinite;
+}
+
+/* Utility classes (will be obfuscated) */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.margin-small { margin: 10px; }
+.margin-medium { margin: 20px; }
+.margin-large { margin: 40px; }
+
+.padding-small { padding: 10px; }
+.padding-medium { padding: 20px; }
+.padding-large { padding: 40px; }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-center { justify-content: center; align-items: center; }
+
+/* Theme variations (will be obfuscated) */
+.theme-dark {
+  --primary-color: #2980b9;
+  --secondary-color: #c0392b;
+  --text-color: #ecf0f1;
+  --background-color: #2c3e50;
+}
+
+.theme-light {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --text-color: #2c3e50;
+  --background-color: #ecf0f1;
+}
+
+/* Print styles (will be obfuscated) */
+@media print {
+  .no-print { display: none; }
+  .navigation-menu { display: none; }
+  .admin-controls { display: none; }
+  
+  .main-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .user-profile-card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}

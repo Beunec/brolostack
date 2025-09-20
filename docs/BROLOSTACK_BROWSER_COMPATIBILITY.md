@@ -86,7 +86,7 @@ import { Brolostack } from 'brolostack';
 
 const app = new Brolostack({
   appName: 'my-app',
-  version: '1.0.0'
+  version 1.0.2'
 });
 
 // Works on all supported browsers
@@ -330,7 +330,7 @@ if (report.browser.features.duckDuckGoPrivacy) {
 ```typescript
 const app = new Brolostack({
   appName: 'my-app',
-  version: '1.0.0',
+  version 1.0.2',
   debug: true // Enables detailed logging
 });
 ```

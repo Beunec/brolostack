@@ -1,0 +1,48 @@
+{
+  "name": "brolostack-ciam-showcase",
+  "version": "1.0.0",
+  "description": "Comprehensive showcase of Brolostack CIAM integration with third-party authenticators and hybrid/tribrid modes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'CIAM showcase - see README for usage'",
+    "build": "echo 'CIAM build complete'",
+    "start": "echo 'CIAM server started'"
+  },
+  "keywords": [
+    "brolostack",
+    "ciam",
+    "authentication",
+    "auth0",
+    "cognito",
+    "firebase",
+    "okta",
+    "keycloak",
+    "hybrid-auth",
+    "tribrid-auth",
+    "identity-management"
+  ],
+  "author": "Olu Akinnawo",
+  "publisher": {
+    "name": "Beunec Technologies, Inc.",
+    "email": "support@beunec.com",
+    "url": "https://beunec.co"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beunec/brolostack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beunec/brolostack/issues"
+  },
+  "homepage": "https://github.com/Beunec/brolostack#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.0.2"
+  }
+}

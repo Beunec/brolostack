@@ -1,0 +1,42 @@
+{
+  "name": "brolostack-devil-security-showcase",
+  "version": "1.0.0",
+  "description": "Brolostack Devil Security Framework Showcase",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'This is a showcase example - see README for usage'",
+    "build": "echo 'Example build complete'",
+    "start": "echo 'Example server started'"
+  },
+  "keywords": [
+    "brolostack",
+    "devil",
+    "security",
+    "encryption",
+    "zero-knowledge"
+  ],
+  "author": "Olu Akinnawo",
+  "publisher": {
+    "name": "Beunec Technologies, Inc.",
+    "email": "support@beunec.com",
+    "url": "https://beunec.co"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beunec/brolostack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beunec/brolostack/issues"
+  },
+  "homepage": "https://github.com/Beunec/brolostack#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.0.2"
+  }
+}

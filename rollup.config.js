@@ -17,12 +17,14 @@ export default [
         format: 'cjs',
         sourcemap: true,
         name: 'Brolostack',
-        exports: 'named'
+        exports: 'named',
+        inlineDynamicImports: true
       },
       {
         file: packageJson.module,
         format: 'esm',
-        sourcemap: true
+        sourcemap: true,
+        inlineDynamicImports: true
       }
     ],
     plugins: [
@@ -52,12 +54,14 @@ export default [
       {
         file: 'dist/react.js',
         format: 'cjs',
-        sourcemap: true
+        sourcemap: true,
+        inlineDynamicImports: true
       },
       {
         file: 'dist/react.esm.js',
         format: 'esm',
-        sourcemap: true
+        sourcemap: true,
+        inlineDynamicImports: true
       }
     ],
     plugins: [

@@ -8,6 +8,12 @@
 import { BrolostackConfig, BrolostackApp, BrolostackStore, StorageAdapter, BrolostackAPI, AIAgent } from '../types';
 import { EventEmitter } from '../utils/EventEmitter';
 import { Logger } from '../utils/Logger';
+import { AuthManager } from '../auth/AuthManager';
+import { WebSocketManager } from '../realtime/WebSocketManager';
+import { BrolostackMRMManager } from '../mrm/BrolostackMRMManager';
+import { BrolostackWorker } from '../worker/BrolostackWorker';
+import { BrolostackSecurity } from '../security/BrolostackSecurity';
+import { EnterpriseProviderManager } from '../providers/EnterpriseProviderManager';
 export declare class Brolostack implements BrolostackApp {
     readonly config: BrolostackConfig;
     readonly storage: StorageAdapter;
@@ -24,6 +30,13 @@ export declare class Brolostack implements BrolostackApp {
         clearMemory(): Promise<void>;
         getMemoryStats(): any;
     };
+    readonly auth?: AuthManager;
+    readonly realtime?: WebSocketManager;
+    readonly ssr?: BrolostackMRMManager;
+    readonly worker?: BrolostackWorker;
+    readonly security?: BrolostackSecurity;
+    readonly providers?: EnterpriseProviderManager;
+    readonly cloud?: any;
     private readonly eventEmitter;
     private readonly logger;
     private readonly aiManager;
@@ -31,9 +44,21 @@ export declare class Brolostack implements BrolostackApp {
     private startTime;
     constructor(config: BrolostackConfig);
     /**
+     * Initialize cloud integration using dynamic import
+     */
+    private initializeCloudIntegration;
+    /**
+     * Initialize enterprise features based on configuration
+     */
+    private initializeEnterpriseFeatures;
+    /**
      * Initialize the Brolostack framework
      */
     initialize(): Promise<void>;
+    /**
+     * Initialize enterprise components
+     */
+    private initializeEnterpriseComponents;
     /**
      * Create a new store
      */
@@ -71,6 +96,33 @@ export declare class Brolostack implements BrolostackApp {
         storageSize: number;
         uptime: number;
         version: string;
+        environment?: {
+            current: string;
+            debug: boolean;
+            performance: any;
+            security: any;
+        };
+        enterprise?: {
+            auth?: boolean;
+            realtime?: boolean;
+            mrm?: boolean;
+            worker?: boolean;
+            security?: boolean;
+            providers?: boolean;
+            cloud?: boolean;
+        };
+    };
+    /**
+     * Check if any enterprise features are enabled
+     */
+    hasEnterpriseFeatures(): boolean;
+    /**
+     * Get enterprise feature status
+     */
+    getEnterpriseStatus(): {
+        enabled: boolean;
+        features: string[];
+        version: string;
     };
     /**
      * Persist all stores to storage
@@ -80,6 +132,10 @@ export declare class Brolostack implements BrolostackApp {
      * Destroy the Brolostack instance
      */
     destroy(): void;
+    /**
+     * Destroy enterprise components
+     */
+    private destroyEnterpriseComponents;
     /**
      * Get the event emitter for custom event handling
      */

@@ -1,0 +1,46 @@
+{
+  "name": "brolostack-ai-framework-showcase",
+  "version": "1.0.0",
+  "description": "Comprehensive showcase of Brolostack AI Framework with ReAct, CoT, ToT, CoT-SC and AI Governance",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo 'AI Framework showcase - see README for usage'",
+    "build": "echo 'AI Framework build complete'",
+    "start": "echo 'AI Framework server started'"
+  },
+  "keywords": [
+    "brolostack",
+    "ai",
+    "reasoning",
+    "governance",
+    "react",
+    "cot",
+    "tot",
+    "cotsc",
+    "bsdgf4ai"
+  ],
+  "author": "Olu Akinnawo",
+  "publisher": {
+    "name": "Beunec Technologies, Inc.",
+    "email": "support@beunec.com",
+    "url": "https://beunec.co"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beunec/brolostack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beunec/brolostack/issues"
+  },
+  "homepage": "https://github.com/Beunec/brolostack#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "typescript": "^5.0.2"
+  }
+}

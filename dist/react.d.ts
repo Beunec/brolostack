@@ -14,6 +14,71 @@ interface BrolostackConfig {
     compression?: boolean;
     maxStorageSize?: number;
     debug?: boolean;
+    enterprise?: {
+        auth?: {
+            enabled: boolean;
+            provider?: string;
+            endpoints?: Record<string, string>;
+            tokenStorage?: string;
+            autoRefresh?: boolean;
+            multiFactorAuth?: any;
+            ciam?: boolean;
+            hybrid?: boolean;
+            tribrid?: boolean;
+        };
+        ai?: {
+            enabled: boolean;
+            governance?: boolean;
+            reasoning?: boolean;
+            tokenControl?: boolean;
+        };
+        realtime?: {
+            enabled: boolean;
+            url?: string;
+            reconnectInterval?: number;
+            maxReconnectAttempts?: number;
+            heartbeatInterval?: number;
+            compression?: boolean;
+        };
+        mrm?: {
+            enabled: boolean;
+            mode?: 'ssr' | 'ssg' | 'hybrid';
+            cacheStrategy?: string;
+            prerenderRoutes?: string[];
+            staticGeneration?: any;
+            hydration?: any;
+        };
+        worker?: {
+            enabled: boolean;
+            security?: any;
+            database?: any;
+            realtime?: any;
+            templates?: any;
+        };
+        security?: {
+            enabled: boolean;
+            encryption?: any;
+            blockchain?: any;
+            authentication?: any;
+            privacy?: any;
+            compliance?: any;
+        };
+        providers?: {
+            enabled: boolean;
+            ai?: any;
+            cloud?: any;
+            selectionStrategy?: string;
+            healthChecks?: any;
+            metrics?: any;
+        };
+        cloud?: {
+            enabled: boolean;
+            providers?: any[];
+            defaultProvider?: string;
+            syncStrategy?: string;
+            backup?: any;
+        };
+    };
 }
 interface StorageAdapter {
     getItem(key: string): Promise<string | null>;
@@ -82,10 +147,53 @@ interface BrolostackProviderProps {
     appName: string;
     config?: Partial<BrolostackConfig>;
     children: ReactNode;
+    initialData?: Record<string, any>;
+    ssrMode?: 'ssr' | 'ssg' | 'hybrid' | 'client';
+    hydrationStrategy?: 'immediate' | 'lazy' | 'on-demand';
 }
-declare function BrolostackProvider({ appName, config, children }: BrolostackProviderProps): react_jsx_runtime.JSX.Element;
+declare function BrolostackProvider({ appName, config, children, initialData, ssrMode, hydrationStrategy }: BrolostackProviderProps): react_jsx_runtime.JSX.Element;
 declare function useBrolostack(): BrolostackContextValue;
 declare function useBrolostackStore<T>(storeName: string): BrolostackStore<T>;
 declare function useBrolostackState<T>(storeName: string, selector?: (state: T) => any): any;
+/**
+ * Hook to access authentication features
+ */
+declare function useBrolostackAuth(): any;
+/**
+ * Hook to access real-time features
+ */
+declare function useBrolostackRealtime(): any;
+/**
+ * Hook to access MRM (Multi-Rendering Mode) features
+ */
+declare function useBrolostackMRM(): any;
+/**
+ * Hook to access security features
+ */
+declare function useBrolostackSecurity(): any;
+/**
+ * Hook to access provider management
+ */
+declare function useBrolostackProviders(): any;
+/**
+ * Hook to access cloud integration
+ */
+declare function useBrolostackCloud(): any;
+/**
+ * Hook to check enterprise feature availability
+ */
+declare function useBrolostackEnterprise(): {
+    isEnabled: any;
+    status: any;
+    features: {
+        auth: boolean;
+        realtime: boolean;
+        mrm: boolean;
+        worker: boolean;
+        security: boolean;
+        providers: boolean;
+        cloud: boolean;
+    };
+};
 
-export { BrolostackProvider, useBrolostack, useBrolostackState, useBrolostackStore };
+export { BrolostackProvider, useBrolostack, useBrolostackAuth, useBrolostackCloud, useBrolostackEnterprise, useBrolostackMRM, useBrolostackProviders, useBrolostackRealtime, useBrolostackSecurity, useBrolostackState, useBrolostackStore };

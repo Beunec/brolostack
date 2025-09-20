@@ -1,0 +1,74 @@
+# Beunec Internal Files - Keep Private
+**/BEUNEC*
+**/Internal*
+**/internal*
+**/Confidential*
+**/confidential*
+BROLOSTACK1.0_STATUS_REPORT.md
+
+# Development Files
+.vscode/
+.idea/
+*.log
+*.tmp
+node_modules/
+coverage/
+.nyc_output/
+.cache/
+
+# Keep src/ for open source transparency
+# Keep dist/ for compiled code
+# Keep docs/ for public documentation
+# Keep examples/ for developer reference
+
+# Example Files (keep for developers)
+# examples/ - keep all examples for public use
+
+# Development Configuration
+.env*
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Testing
+test/
+tests/
+*.test.*
+*.spec.*
+jest.config.*
+vitest.config.*
+
+# Source Maps
+*.map
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary Files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Editor Files
+*.swp
+*.swo
+.vim/
+.emacs.d/
+
+# Keep only essential files for npm package

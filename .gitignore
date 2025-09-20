@@ -91,3 +91,16 @@ jspm_packages/
 
 # TernJS port file
 .tern-port
+
+# Beunec Internal - Console Module (Private)
+src/console/
+src/build/
+src/security/BrolostackDevilSourceCode.ts
+src/security/BrolostackDevil.ts
+src/security/BrolostackSecurity.ts
+src/security/BrolostackSecurityManager.ts
+src/security/SecurityAuditor.ts
+docs/*CONSOLE*
+examples/console-showcase/
+**/console-showcase/
+BROLOSTACK1.0_STATUS_REPORT.md

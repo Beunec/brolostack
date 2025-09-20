@@ -13,6 +13,73 @@ export interface BrolostackConfig {
   compression?: boolean;
   maxStorageSize?: number; // in MB
   debug?: boolean;
+  
+  // Enterprise Configuration
+  enterprise?: {
+    auth?: {
+      enabled: boolean;
+      provider?: string;
+      endpoints?: Record<string, string>;
+      tokenStorage?: string;
+      autoRefresh?: boolean;
+      multiFactorAuth?: any;
+      ciam?: boolean;
+      hybrid?: boolean;
+      tribrid?: boolean;
+    };
+    ai?: {
+      enabled: boolean;
+      governance?: boolean;
+      reasoning?: boolean;
+      tokenControl?: boolean;
+    };
+    realtime?: {
+      enabled: boolean;
+      url?: string;
+      reconnectInterval?: number;
+      maxReconnectAttempts?: number;
+      heartbeatInterval?: number;
+      compression?: boolean;
+    };
+    mrm?: {
+      enabled: boolean;
+      mode?: 'ssr' | 'ssg' | 'hybrid';
+      cacheStrategy?: string;
+      prerenderRoutes?: string[];
+      staticGeneration?: any;
+      hydration?: any;
+    };
+    worker?: {
+      enabled: boolean;
+      security?: any;
+      database?: any;
+      realtime?: any;
+      templates?: any;
+    };
+    security?: {
+      enabled: boolean;
+      encryption?: any;
+      blockchain?: any;
+      authentication?: any;
+      privacy?: any;
+      compliance?: any;
+    };
+    providers?: {
+      enabled: boolean;
+      ai?: any;
+      cloud?: any;
+      selectionStrategy?: string;
+      healthChecks?: any;
+      metrics?: any;
+    };
+    cloud?: {
+      enabled: boolean;
+      providers?: any[];
+      defaultProvider?: string;
+      syncStrategy?: string;
+      backup?: any;
+    };
+  };
 }
 
 export interface StorageAdapter {
